@@ -1,9 +1,10 @@
 import { siteConfig } from '@/config/site';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const metadata = {
   title: `Our Team & Leadership - ${siteConfig.name}`,
-  description: 'Meet the executive leadership, management, IT, and certified spray specialists behind Peso Pest Control.',
+  description: 'Meet the executive leadership, management, IT, and certified spray specialists behind Peso Pest Solutions.',
 };
 
 export default function TeamPage() {
@@ -34,12 +35,15 @@ export default function TeamPage() {
           <div className="rounded-3xl bg-slate-50 dark:bg-[#15223e] border border-slate-200 dark:border-slate-700 p-8 sm:p-12 shadow-md flex flex-col lg:flex-row gap-10 items-center lg:items-start">
             <div className="flex flex-col items-center gap-4 shrink-0 w-full lg:w-80">
               <div className="relative w-64 h-80 sm:w-72 sm:h-96 rounded-3xl overflow-hidden shadow-xl border-4 border-white dark:border-slate-800 bg-slate-200 dark:bg-slate-800">
-                <img
+                <Image
                   src={founder.image}
                   alt={founder.name}
-                  className="w-full h-full object-cover object-top"
+                  fill
+                  sizes="(max-width: 768px) 256px, 288px"
+                  className="object-cover object-top"
+                  priority
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex flex-col justify-end p-6 text-white">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex flex-col justify-end p-6 text-white z-10">
                   <span className="text-xs font-bold text-emerald-400 tracking-wider uppercase">Founder & MD</span>
                   <h3 className="text-xl font-bold">{founder.name}</h3>
                   <span className="text-xs text-slate-300">{founder.degree}</span>
@@ -104,12 +108,15 @@ export default function TeamPage() {
           <div className="rounded-3xl bg-slate-50 dark:bg-[#15223e] border border-slate-200 dark:border-slate-700 p-8 sm:p-12 shadow-md flex flex-col lg:flex-row-reverse gap-10 items-center lg:items-start">
             <div className="flex flex-col items-center gap-4 shrink-0 w-full lg:w-80">
               <div className="relative w-64 h-80 sm:w-72 sm:h-96 rounded-3xl overflow-hidden shadow-xl border-4 border-white dark:border-slate-800 bg-slate-200 dark:bg-slate-800">
-                <img
+                <Image
                   src={technicalDirector.image}
                   alt={technicalDirector.name}
-                  className="w-full h-full object-cover object-top"
+                  fill
+                  sizes="(max-width: 768px) 256px, 288px"
+                  className="object-cover object-top"
+                  priority
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex flex-col justify-end p-6 text-white">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex flex-col justify-end p-6 text-white z-10">
                   <span className="text-xs font-bold text-emerald-400 tracking-wider uppercase">Technical Director</span>
                   <h3 className="text-xl font-bold">{technicalDirector.name}</h3>
                   <span className="text-xs text-slate-300 line-clamp-1">{technicalDirector.degree}</span>
@@ -178,12 +185,14 @@ export default function TeamPage() {
           <div className="rounded-3xl bg-slate-50 dark:bg-[#15223e] border border-slate-200 dark:border-slate-700 p-8 sm:p-12 shadow-md flex flex-col lg:flex-row gap-10 items-center lg:items-start">
             <div className="flex flex-col items-center gap-4 shrink-0 w-full lg:w-80">
               <div className="relative w-64 h-80 sm:w-72 sm:h-96 rounded-3xl overflow-hidden shadow-xl border-4 border-white dark:border-slate-800 bg-slate-200 dark:bg-slate-800">
-                <img
+                <Image
                   src={legalAdvisor.image}
                   alt={legalAdvisor.name}
-                  className="w-full h-full object-cover object-top"
+                  fill
+                  sizes="(max-width: 768px) 256px, 288px"
+                  className="object-cover object-top"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex flex-col justify-end p-6 text-white">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex flex-col justify-end p-6 text-white z-10">
                   <span className="text-xs font-bold text-emerald-400 tracking-wider uppercase">Legal Advisor</span>
                   <h3 className="text-xl font-bold">{legalAdvisor.name}</h3>
                   <span className="text-xs text-slate-300">{legalAdvisor.degree}</span>
@@ -255,8 +264,14 @@ export default function TeamPage() {
             {/* Fareeha Noureen (Management Head) */}
             <div className="rounded-3xl bg-white dark:bg-[#15223e] border border-slate-200 dark:border-slate-700 p-8 shadow-sm flex flex-col justify-between gap-6 hover:border-emerald-500/40 transition-all">
               <div className="flex flex-col sm:flex-row gap-6 items-start">
-                <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden bg-slate-200 dark:bg-slate-800 shrink-0 border border-slate-300 dark:border-slate-700 shadow-md flex items-center justify-center">
-                  <img src={managementHead.image} alt={managementHead.name} className="w-full h-full object-cover" />
+                <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden bg-slate-200 dark:bg-slate-800 shrink-0 border border-slate-300 dark:border-slate-700 shadow-md">
+                  <Image
+                    src={managementHead.image}
+                    alt={managementHead.name}
+                    fill
+                    sizes="112px"
+                    className="object-cover"
+                  />
                 </div>
 
                 <div className="flex flex-col gap-1 flex-1">
@@ -293,8 +308,14 @@ export default function TeamPage() {
             {/* M. Jazib (Head of IT & Digital Infrastructure) */}
             <div className="rounded-3xl bg-white dark:bg-[#15223e] border border-slate-200 dark:border-slate-700 p-8 shadow-sm flex flex-col justify-between gap-6 hover:border-emerald-500/40 transition-all">
               <div className="flex flex-col sm:flex-row gap-6 items-start">
-                <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden bg-slate-200 dark:bg-slate-800 shrink-0 border border-slate-300 dark:border-slate-700 shadow-md">
-                  <img src={itHead.image} alt={itHead.name} className="w-full h-full object-cover object-top" />
+                <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden bg-slate-200 dark:bg-slate-800 shrink-0 border border-slate-300 dark:border-slate-700 shadow-md">
+                  <Image
+                    src={itHead.image}
+                    alt={itHead.name}
+                    fill
+                    sizes="112px"
+                    className="object-cover object-top"
+                  />
                 </div>
 
                 <div className="flex flex-col gap-1 flex-1">

@@ -1,12 +1,13 @@
-import { MetadataRoute } from 'next'
+import { MetadataRoute } from 'next';
+import { siteConfig } from '@/config/site';
 
 export default function robots(): MetadataRoute.Robots {
-    return {
-        rules: {
-            userAgent: '*',
-            allow: '/',
-            disallow: '/admin/',
-        },
-        sitemap: 'https://peso.io/sitemap.xml',
-    }
+  return {
+    rules: {
+      userAgent: '*',
+      allow: '/',
+      disallow: ['/admin/', '/api/'],
+    },
+    sitemap: `${siteConfig.url}/sitemap.xml`,
+  };
 }

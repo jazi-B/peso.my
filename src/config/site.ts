@@ -1,14 +1,43 @@
 export const siteConfig = {
   name: "Peso",
   fullName: "Peso Pest Solutions",
-  tagline: "Pest-Free Living, Guaranteed",
-  description: "Professional Pest Control & Fumigation Services for your home, office, and business.",
+  tagline: "Be Safe, Pest Free",
+  slogan: "Professional Pest Management & Fumigation Services",
+  description: "Certified Pest Control, Fumigation, Termite Proofing, and Disinfection Services for homes, offices, hotels, warehouses, and industrial facilities in Multan and across Pakistan.",
+  url: "https://peso.my",
+  logo: "/images/logo.webp",
+  logoPng: "/images/logo.png",
+  ogImage: "/images/og-image.webp",
   contact: {
     email: "pesopestsolutions@gmail.com",
     phone: "+92 333 6218102",
     whatsapp: "+92 300 6886623",
     whatsappClean: "923006886623",
     facebook: "https://www.facebook.com/share/p/14ZMFqs3L4M/",
+    address: "Multan, Punjab, Pakistan",
+    country: "Pakistan",
+    city: "Multan"
+  },
+  seo: {
+    keywords: [
+      "Peso Pest Solutions",
+      "Peso Pest Control",
+      "Pest Control Multan",
+      "Pest Control Services Multan",
+      "Fumigation Services Multan",
+      "Termite Control Multan",
+      "Termite Proofing Pakistan",
+      "Demak Treatment Pakistan",
+      "Cockroach Spray Multan",
+      "Bed Bug Treatment Pakistan",
+      "Rodent Control Pakistan",
+      "ULV Fogging Multan",
+      "Thermal Fogging Services",
+      "Disinfection Service Multan",
+      "Commercial Pest Management Pakistan",
+      "Jawad Ahmad Ch Peso",
+      "Arslan Ch Entomologist"
+    ]
   },
   services: [
     {
@@ -16,7 +45,7 @@ export const siteConfig = {
       title: "General Pest Control",
       desc: "Comprehensive treatment for common household pests including ants, cockroaches, and spiders.",
       details: "Our general pest control service uses eco-friendly solutions to protect your home year-round. We target nesting sites and entry points to ensure long-term protection.",
-      image: "/images/general_pest.png",
+      image: "/images/general_pest.webp",
       features: ["Odorless & Pet-Safe", "Targets Nesting Sites", "Long-Term Protection"]
     },
     {
@@ -24,7 +53,7 @@ export const siteConfig = {
       title: "Fumigation",
       desc: "Deep cleaning and fumigation ensuring total eradication of severe infestations.",
       details: "Professional-grade fumigation for severe infestations. We ensure complete coverage of your property, penetrating cracks and crevices where pests hide.",
-      image: "/images/fumigation.png",
+      image: "/images/fumigation.webp",
       features: ["Complete Property Coverage", "Deep Crevice Penetration", "Total Eradication"]
     },
     {
@@ -32,7 +61,7 @@ export const siteConfig = {
       title: "Termite Control",
       desc: "Protect your property from structural damage caused by destructive termites.",
       details: "Advanced termite detection and elimination. We use baiting systems and soil treatments to destroy colonies and prevent future damage to your property's structure.",
-      image: "/images/termite.png",
+      image: "/images/termite.webp",
       features: ["Colony Eradication", "Sub-Slab Treatment", "Long-Term Defense"]
     },
     {
@@ -40,7 +69,7 @@ export const siteConfig = {
       title: "Disinfectant Service",
       desc: "Sanitization services to keep your environment virus and germ-free.",
       details: "Hospital-grade disinfection services for homes and offices. Our treatment eliminates 99.9% of bacteria and viruses, creating a safe and healthy environment.",
-      image: "/images/disinfectant.png",
+      image: "/images/disinfectant.webp",
       features: ["99.9% Pathogen Elimination", "Hospital-Grade Sanitization", "Quick Drying"]
     },
     {
@@ -48,7 +77,7 @@ export const siteConfig = {
       title: "Rodent Control",
       desc: "Effective removal and prevention of rats, mice, and other rodents.",
       details: "Humane and effective rodent control. We identify entry points, trap existing rodents, and seal your property to prevent them from returning.",
-      image: "/images/rodent.png",
+      image: "/images/rodent.webp",
       features: ["Entry Point Sealing", "Humane Trapping", "Preventive Barrier"]
     },
   ],
@@ -79,7 +108,7 @@ export const siteConfig = {
     degree: "Master in Political Science",
     title: "Founder & Managing Director",
     company: "Peso Pest Control",
-    image: "/images/jawad_ahmad.png",
+    image: "/images/jawad_ahmad.webp",
     motto: "Your Safety. Our Responsibility. Pest-Free Environment.",
     mission: "Professional Service • Quality Treatment • Customer Satisfaction",
     vision: "To make Peso Pest Control a trusted name in professional pest management by delivering dependable services and building long-term relationships with our customers.",
@@ -91,7 +120,7 @@ export const siteConfig = {
     degree: "M.Sc. (Hons.) Entomology — PMAS-Arid Agriculture University",
     title: "Technical Director & Entomology Specialist",
     company: "Peso Pest Control",
-    image: "/images/arslan_ch.png",
+    image: "/images/arslan_ch.webp",
     motto: "Science Behind Pest Control",
     framework: "Identify • Inspect • Control • Prevent",
     vision: "To establish modern pest management as a professional, scientific and responsible service in Pakistan.",
@@ -118,7 +147,7 @@ export const siteConfig = {
     degree: "LLB | Advocate High Court",
     title: "Legal Advisor",
     company: "Peso Pest Control",
-    image: "/images/ahtsham_ul_haq.jpg",
+    image: "/images/ahtsham_ul_haq.webp",
     motto: "Providing sound legal guidance for responsible, compliant and sustainable business growth.",
     bio: "Ahtsham-ul-Haq is an Advocate of the High Court serving as Legal Advisor at Peso Pest Control. He provides legal guidance regarding business agreements, service contracts, regulatory compliance, customer and vendor agreements, documentation, and corporate legal governance.",
     responsibilities: [
@@ -135,7 +164,7 @@ export const siteConfig = {
     degree: "Masters in Philosophy",
     title: "Management Head",
     company: "Peso Pest Control",
-    image: "/images/fareeha_noureen.png",
+    image: "/images/fareeha_noureen.webp",
     bio: "Oversees company operations, organizational management, administrative planning, and client service coordination to ensure seamless execution across all projects."
   },
   itHead: {
@@ -143,7 +172,7 @@ export const siteConfig = {
     degree: "IT & Systems Specialist",
     title: "Head of IT & Digital Infrastructure",
     company: "Peso Pest Control",
-    image: "/images/jazib.jpg",
+    image: "/images/jazib.webp",
     bio: "Manages digital platforms, online dispatch systems, customer automation, and technology infrastructure to provide a seamless booking experience for Peso Pest Control."
   },
   teamMembers: [
@@ -156,7 +185,7 @@ export const siteConfig = {
       specialization: "Operations, Strategy & Client Relations",
       bio: "Founder & Managing Director leading Peso Pest Control with a customer-centric focus on professional, safe, and modern pest management across residential and commercial sectors.",
       specs: ["Founder & MD", "Leadership & Strategy", "Quality & Safety Assurance"],
-      image: "/images/jawad_ahmad.png"
+      image: "/images/jawad_ahmad.webp"
     },
     {
       name: "Arslan Ch",
@@ -167,7 +196,7 @@ export const siteConfig = {
       specialization: "Scientific Integrated Pest Management (IPM) & Biological Assessment",
       bio: "Specializing in insect identification, pest biology, ecology, and science-based pest control strategies for residential, commercial, industrial, and agricultural sectors.",
       specs: ["M.Sc. (Hons.) Entomology", "IPM Specialist", "ULV & Thermal Fogging Lead"],
-      image: "/images/arslan_ch.png"
+      image: "/images/arslan_ch.webp"
     },
     {
       name: "Ahtsham-ul-Haq",
@@ -178,7 +207,7 @@ export const siteConfig = {
       specialization: "Corporate Compliance & Commercial Service Contracts",
       bio: "Advocate of the High Court ensuring legal integrity, contract governance, regulatory compliance, and client agreement standards.",
       specs: ["Advocate High Court", "Corporate Compliance", "Contract Governance"],
-      image: "/images/ahtsham_ul_haq.jpg"
+      image: "/images/ahtsham_ul_haq.webp"
     },
     {
       name: "Fareeha Noureen",
@@ -189,7 +218,7 @@ export const siteConfig = {
       specialization: "Organizational Planning & Customer Coordination",
       bio: "Leads operational management, personnel coordination, and strategic client administration.",
       specs: ["Masters in Philosophy", "Operations Management", "Customer Coordination"],
-      image: "/images/fareeha_noureen.png"
+      image: "/images/fareeha_noureen.webp"
     },
     {
       name: "M. Jazib",
@@ -200,7 +229,7 @@ export const siteConfig = {
       specialization: "Platform Engineering, Automation & Dispatch Systems",
       bio: "Spearheads digital systems, web platform architecture, online dispatch, and automated client communication.",
       specs: ["IT & Systems Architecture", "Digital Dispatch", "Platform Automation"],
-      image: "/images/jazib.jpg"
+      image: "/images/jazib.webp"
     }
   ],
   faqs: [

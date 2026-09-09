@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 import { siteConfig } from '@/config/site';
 
@@ -29,7 +30,7 @@ export default function HomePage() {
           </h1>
 
           <p className="text-base sm:text-lg text-slate-300 max-w-2xl leading-relaxed">
-            {siteConfig.description} Safe, reliable, and government-approved treatments designed for long-lasting protection.
+            {siteConfig.description}
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
@@ -75,7 +76,7 @@ export default function HomePage() {
               Our Specialized Services
             </h2>
             <p className="text-slate-600 dark:text-slate-400 text-sm mt-2">
-              We offer comprehensive solutions tailored for homes, apartments, offices, and commercial properties.
+              Comprehensive pest management tailored for homes, apartments, offices, and commercial properties.
             </p>
           </div>
 
@@ -87,10 +88,12 @@ export default function HomePage() {
               >
                 <div>
                   <div className="relative h-56 w-full overflow-hidden bg-slate-200 dark:bg-slate-800">
-                    <img
+                    <Image
                       src={service.image}
                       alt={service.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
 
@@ -137,7 +140,7 @@ export default function HomePage() {
                 Certified Professionals
               </span>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-                Meet Our Team
+                Meet Our Leadership & Team
               </h2>
               <p className="text-slate-600 dark:text-slate-400 text-sm mt-1">
                 Experienced directors, certified entomologists, and trained technicians.
@@ -153,17 +156,23 @@ export default function HomePage() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {siteConfig.teamMembers.map((member, i) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {siteConfig.teamMembers.slice(0, 3).map((member, i) => (
               <div
                 key={i}
-                className="bg-white dark:bg-[#15223e] p-6 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm flex flex-col justify-between gap-4"
+                className="bg-white dark:bg-[#15223e] p-6 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-sm flex flex-col justify-between gap-4"
               >
                 <div>
-                  <div className="w-16 h-16 rounded-xl overflow-hidden bg-slate-100 dark:bg-slate-800 mb-3 border border-slate-200 dark:border-slate-700">
-                    <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
+                  <div className="relative w-20 h-20 rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-800 mb-3 border border-slate-200 dark:border-slate-700">
+                    <Image
+                      src={member.image}
+                      alt={member.name}
+                      fill
+                      sizes="80px"
+                      className="object-cover object-top"
+                    />
                   </div>
-                  <h3 className="text-base font-bold text-slate-900 dark:text-white">{member.name}</h3>
+                  <h3 className="text-lg font-bold text-slate-900 dark:text-white">{member.name}</h3>
                   <div className="text-xs font-semibold text-emerald-600 dark:text-emerald-400">{member.title}</div>
                   <p className="text-xs text-slate-500 dark:text-slate-400 mt-2 leading-relaxed line-clamp-3">
                     {member.bio}
@@ -185,7 +194,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center max-w-2xl mx-auto mb-14">
             <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-              Why Choose {siteConfig.name}?
+              Why Choose {siteConfig.fullName}?
             </h2>
             <p className="text-slate-600 dark:text-slate-400 text-sm mt-2">
               We provide unmatched dedication to quality, safety, and customer satisfaction.
@@ -247,33 +256,6 @@ export default function HomePage() {
                 </div>
               );
             })}
-          </div>
-        </div>
-      </section>
-
-      {/* 6. Simple Bottom CTA Banner */}
-      <section className="w-full bg-emerald-600 text-white py-14 px-4 sm:px-6 text-center">
-        <div className="max-w-3xl mx-auto flex flex-col items-center gap-4">
-          <h3 className="text-2xl sm:text-3xl font-black">Ready for a Pest-Free Space?</h3>
-          <p className="text-emerald-100 text-sm">
-            Contact us today for a free consultation or book your service appointment online.
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
-            <Link
-              href="/order"
-              className="px-8 py-3.5 rounded-xl font-bold text-sm bg-white text-emerald-900 hover:bg-slate-100 shadow-lg transition-all"
-            >
-              Book a Service
-            </Link>
-            <a
-              href={`https://wa.me/${siteConfig.contact.whatsappClean}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-3.5 rounded-xl font-bold text-sm bg-emerald-950 hover:bg-emerald-900 text-white shadow-lg transition-all flex items-center gap-2"
-            >
-              <span className="material-symbols-outlined text-base">chat</span>
-              <span>Chat on WhatsApp</span>
-            </a>
           </div>
         </div>
       </section>

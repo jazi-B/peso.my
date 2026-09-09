@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import { siteConfig } from '@/config/site';
@@ -54,7 +55,7 @@ export const Navbar = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 h-9 flex items-center justify-between text-xs">
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-emerald-400"></span>
-            <span className="text-slate-300">Professional Pest Control & Fumigation</span>
+            <span className="text-slate-300">Professional Pest Management • Multan & Across Pakistan</span>
           </div>
           <div className="flex items-center gap-4">
             <a
@@ -86,13 +87,25 @@ export const Navbar = () => {
             : 'bg-white dark:bg-[#0B132B] border-b border-slate-100 dark:border-slate-800/80'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 h-18 py-3 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 h-18 py-2.5 flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3">
-            <img src="/images/logo.png" alt="Peso Logo" className="h-9 w-auto object-contain" />
+          <Link href="/" className="flex items-center gap-3 group">
+            <div className="relative w-12 h-12 flex items-center justify-center">
+              <Image
+                src={siteConfig.logo}
+                alt="Peso Pest Solutions Logo"
+                width={48}
+                height={48}
+                className="w-full h-full object-contain drop-shadow-sm group-hover:scale-105 transition-transform"
+                priority
+              />
+            </div>
             <div className="flex flex-col">
-              <span className="text-2xl font-black tracking-tight text-[#059669] dark:text-emerald-400">
-                {siteConfig.name}
+              <span className="text-xl font-black tracking-tight text-slate-900 dark:text-white leading-tight">
+                PESO
+              </span>
+              <span className="text-[10px] font-bold text-emerald-600 dark:text-emerald-400 tracking-wider uppercase">
+                Pest Solutions
               </span>
             </div>
           </Link>
@@ -118,69 +131,81 @@ export const Navbar = () => {
           </nav>
 
           {/* Right CTA & Theme */}
-          <div className="flex items-center gap-3">
+          <div className="hidden md:flex items-center gap-3">
             <button
               onClick={toggleTheme}
-              className="w-9 h-9 rounded-xl flex items-center justify-center bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors border border-slate-200 dark:border-slate-700"
+              className="p-2 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
               aria-label="Toggle Theme"
             >
-              <span className="material-symbols-outlined text-base">
-                {theme === 'light' ? 'dark_mode' : 'light_mode'}
+              <span className="material-symbols-outlined text-xl">
+                {theme === 'dark' ? 'light_mode' : 'dark_mode'}
               </span>
             </button>
 
             <Link
               href="/order"
-              className="hidden sm:inline-flex items-center gap-1.5 px-5 py-2.5 rounded-xl font-bold text-sm bg-emerald-600 hover:bg-emerald-500 text-white shadow-md transition-all"
+              className="px-5 py-2.5 rounded-xl font-bold text-xs bg-emerald-600 hover:bg-emerald-500 text-white shadow-md hover:shadow-emerald-600/20 transition-all flex items-center gap-1.5"
             >
+              <span className="material-symbols-outlined text-base">calendar_month</span>
               <span>Book a Service</span>
-              <span className="material-symbols-outlined text-base">arrow_forward</span>
             </Link>
+          </div>
 
-            {/* Mobile Menu Button */}
+          {/* Mobile Menu Button */}
+          <div className="flex md:hidden items-center gap-2">
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-xl text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+              aria-label="Toggle Theme"
+            >
+              <span className="material-symbols-outlined text-lg">
+                {theme === 'dark' ? 'light_mode' : 'dark_mode'}
+              </span>
+            </button>
+
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="md:hidden w-9 h-9 rounded-xl flex items-center justify-center bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200"
-              aria-label="Menu"
+              className="p-2 rounded-xl text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+              aria-label="Open Menu"
             >
-              <span className="material-symbols-outlined text-xl">
+              <span className="material-symbols-outlined text-2xl">
                 {isOpen ? 'close' : 'menu'}
               </span>
             </button>
           </div>
         </div>
-
-        {/* Mobile Dropdown */}
-        {isOpen && (
-          <div className="md:hidden bg-white dark:bg-[#0B132B] border-b border-slate-200 dark:border-slate-800 px-4 py-4 shadow-xl flex flex-col gap-1">
-            {navLinks.map((link) => {
-              const isActive = pathname === link.href;
-              return (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  onClick={() => setIsOpen(false)}
-                  className={`px-4 py-2.5 rounded-xl text-sm font-semibold transition-colors ${
-                    isActive
-                      ? 'bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400'
-                      : 'text-slate-800 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800/60'
-                  }`}
-                >
-                  {link.name}
-                </Link>
-              );
-            })}
-            <Link
-              href="/order"
-              onClick={() => setIsOpen(false)}
-              className="mt-2 w-full py-3 rounded-xl font-bold text-sm text-center bg-emerald-600 text-white shadow-md flex items-center justify-center gap-1.5"
-            >
-              <span>Book a Service</span>
-              <span className="material-symbols-outlined text-base">arrow_forward</span>
-            </Link>
-          </div>
-        )}
       </div>
+
+      {/* Mobile Drawer */}
+      {isOpen && (
+        <div className="md:hidden bg-white dark:bg-[#0B132B] border-b border-slate-200 dark:border-slate-800 px-4 pt-2 pb-6 flex flex-col gap-3 shadow-xl">
+          <nav className="flex flex-col gap-1">
+            {navLinks.map((link) => (
+              <Link
+                key={link.name}
+                href={link.href}
+                onClick={() => setIsOpen(false)}
+                className={`px-4 py-3 rounded-xl text-sm font-semibold transition-colors ${
+                  pathname === link.href
+                    ? 'text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/60'
+                    : 'text-slate-800 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800'
+                }`}
+              >
+                {link.name}
+              </Link>
+            ))}
+          </nav>
+
+          <Link
+            href="/order"
+            onClick={() => setIsOpen(false)}
+            className="w-full py-3 rounded-xl font-bold text-xs bg-emerald-600 text-white text-center shadow-md flex items-center justify-center gap-1.5"
+          >
+            <span className="material-symbols-outlined text-base">calendar_month</span>
+            <span>Book a Service</span>
+          </Link>
+        </div>
+      )}
     </header>
   );
 };

@@ -1,8 +1,9 @@
 import { siteConfig } from '@/config/site';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export const metadata = {
-  title: `Our Services - ${siteConfig.name}`,
+  title: `Our Specialized Services - ${siteConfig.name}`,
   description: 'Explore our full range of certified pest control and fumigation services.',
 };
 
@@ -32,11 +33,13 @@ export default function ServicesPage() {
               }`}
             >
               {/* Image */}
-              <div className="w-full lg:w-1/2 h-64 sm:h-80 rounded-2xl overflow-hidden shadow-md bg-slate-200 dark:bg-slate-800">
-                <img
+              <div className="relative w-full lg:w-1/2 h-64 sm:h-80 rounded-2xl overflow-hidden shadow-md bg-slate-200 dark:bg-slate-800">
+                <Image
                   src={service.image}
                   alt={service.title}
-                  className="w-full h-full object-cover"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
                 />
               </div>
 
@@ -59,7 +62,7 @@ export default function ServicesPage() {
                   ))}
                 </div>
 
-                <div className="pt-4 border-t border-slate-200 dark:border-slate-700 flex items-center gap-4">
+                <div className="pt-4 border-t border-slate-200 dark:border-slate-700 flex flex-wrap items-center gap-4">
                   <Link
                     href={`/order?service=${encodeURIComponent(service.title)}`}
                     className="px-6 py-3 rounded-xl font-bold text-xs bg-emerald-600 hover:bg-emerald-500 text-white shadow-md transition-all flex items-center gap-1.5"
