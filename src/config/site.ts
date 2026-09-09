@@ -10,7 +10,7 @@ export const siteConfig = {
   ogImage: "/images/og-image.webp",
   contact: {
     email: "pesopestsolutions@gmail.com",
-    phone: "+92 333 6218102",
+    phone: "+92 300 6886623",
     whatsapp: "+92 300 6886623",
     whatsappClean: "923006886623",
     facebook: "https://www.facebook.com/share/p/14ZMFqs3L4M/",
