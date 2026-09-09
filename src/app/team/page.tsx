@@ -2,12 +2,12 @@ import { siteConfig } from '@/config/site';
 import Link from 'next/link';
 
 export const metadata = {
-  title: `Our Leadership & Team - ${siteConfig.name}`,
-  description: 'Meet our leadership team: Jawad Ahmad Ch (Founder & MD), Arslan Ch (Technical Director), and Ahtsham-ul-Haq (Legal Advisor).',
+  title: `Our Team & Leadership - ${siteConfig.name}`,
+  description: 'Meet the executive leadership, management, IT, and certified spray specialists behind Peso Pest Control.',
 };
 
 export default function TeamPage() {
-  const { founder, technicalDirector, legalAdvisor } = siteConfig;
+  const { founder, technicalDirector, legalAdvisor, managementHead, itHead } = siteConfig;
 
   return (
     <div className="flex flex-col w-full">
@@ -15,20 +15,20 @@ export default function TeamPage() {
       <section className="w-full bg-[#0B132B] text-white py-16 px-4 sm:px-6 text-center">
         <div className="max-w-3xl mx-auto flex flex-col items-center gap-3">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold uppercase tracking-wider">
-            Leadership & Governance
+            Organizational Structure & Team
           </div>
           <h1 className="text-3xl sm:text-5xl font-black tracking-tight">
-            Meet Our Leadership & Team
+            Our Leadership & Team
           </h1>
           <p className="text-slate-300 text-sm sm:text-base max-w-2xl">
-            A synergy of executive leadership, scientific entomology, and legal compliance dedicated to professional pest management across Pakistan.
+            A cohesive team of executive leadership, certified entomology, legal compliance, operational management, IT infrastructure, and licensed spray technicians.
           </p>
         </div>
       </section>
 
-      {/* CORE LEADERSHIP PILLARS (THREE EXECUTIVE SPOTLIGHT CARDS) */}
+      {/* CORE EXECUTIVE PILLARS */}
       <section className="w-full py-16 bg-white dark:bg-[#0B132B]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col gap-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col gap-14">
           
           {/* 1. FOUNDER & MANAGING DIRECTOR */}
           <div className="rounded-3xl bg-slate-50 dark:bg-[#15223e] border border-slate-200 dark:border-slate-700 p-8 sm:p-12 shadow-md flex flex-col lg:flex-row gap-10 items-center lg:items-start">
@@ -55,7 +55,7 @@ export default function TeamPage() {
             <div className="flex flex-col gap-5 flex-1 text-slate-800 dark:text-slate-200">
               <div>
                 <span className="text-xs font-bold text-amber-600 dark:text-amber-400 uppercase tracking-widest">
-                  Executive Profile
+                  Founder Profile
                 </span>
                 <h2 className="text-3xl font-black text-slate-900 dark:text-white mt-1">
                   {founder.name}
@@ -238,7 +238,157 @@ export default function TeamPage() {
         </div>
       </section>
 
-      {/* 4-STEP SCIENTIFIC INTEGRATED PEST MANAGEMENT (IPM) PROTOCOL */}
+      {/* MANAGEMENT & IT DIGITAL LEADERSHIP */}
+      <section className="w-full py-16 bg-slate-50 dark:bg-[#070D1F] border-t border-slate-200 dark:border-slate-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center max-w-2xl mx-auto mb-12 flex flex-col items-center gap-2">
+            <span className="text-xs font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-widest">
+              Operations, Administration & Technology
+            </span>
+            <h2 className="text-3xl font-black text-slate-900 dark:text-white">
+              Management & Digital Infrastructure
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            
+            {/* Fareeha Noureen (Management Head) */}
+            <div className="rounded-3xl bg-white dark:bg-[#15223e] border border-slate-200 dark:border-slate-700 p-8 shadow-sm flex flex-col justify-between gap-6 hover:border-emerald-500/40 transition-all">
+              <div className="flex flex-col sm:flex-row gap-6 items-start">
+                <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl bg-gradient-to-br from-emerald-100 to-teal-100 dark:from-emerald-950 dark:to-[#111e38] border border-emerald-200 dark:border-emerald-800 shrink-0 flex items-center justify-center text-emerald-600 dark:text-emerald-400 shadow-inner">
+                  <span className="material-symbols-outlined text-5xl">manage_accounts</span>
+                </div>
+
+                <div className="flex flex-col gap-1 flex-1">
+                  <span className="text-xs font-bold text-amber-600 dark:text-amber-400 uppercase">
+                    Administration & Planning
+                  </span>
+                  <h3 className="text-2xl font-bold text-slate-900 dark:text-white">
+                    {managementHead.name}
+                  </h3>
+                  <div className="text-xs font-bold text-emerald-600 dark:text-emerald-400">
+                    {managementHead.title}
+                  </div>
+                  <div className="text-[11px] text-slate-400">
+                    {managementHead.degree}
+                  </div>
+                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
+                    {managementHead.bio}
+                  </p>
+                </div>
+              </div>
+
+              <div className="pt-4 border-t border-slate-100 dark:border-slate-800 flex flex-wrap gap-2">
+                <span className="px-3 py-1 rounded-xl bg-slate-50 dark:bg-[#111e38] border border-slate-200 dark:border-slate-800 text-xs font-medium text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
+                  <span className="material-symbols-outlined text-xs text-emerald-500">task_alt</span>
+                  <span>Operational Governance</span>
+                </span>
+                <span className="px-3 py-1 rounded-xl bg-slate-50 dark:bg-[#111e38] border border-slate-200 dark:border-slate-800 text-xs font-medium text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
+                  <span className="material-symbols-outlined text-xs text-emerald-500">task_alt</span>
+                  <span>Customer Support Coordination</span>
+                </span>
+              </div>
+            </div>
+
+            {/* M. Jazib (Head of IT & Digital Infrastructure) */}
+            <div className="rounded-3xl bg-white dark:bg-[#15223e] border border-slate-200 dark:border-slate-700 p-8 shadow-sm flex flex-col justify-between gap-6 hover:border-emerald-500/40 transition-all">
+              <div className="flex flex-col sm:flex-row gap-6 items-start">
+                <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden bg-slate-200 dark:bg-slate-800 shrink-0 border border-slate-300 dark:border-slate-700 shadow-md">
+                  <img src={itHead.image} alt={itHead.name} className="w-full h-full object-cover object-top" />
+                </div>
+
+                <div className="flex flex-col gap-1 flex-1">
+                  <span className="text-xs font-bold text-blue-600 dark:text-blue-400 uppercase">
+                    Digital Platforms & Infrastructure
+                  </span>
+                  <h3 className="text-2xl font-bold text-slate-900 dark:text-white">
+                    {itHead.name}
+                  </h3>
+                  <div className="text-xs font-bold text-emerald-600 dark:text-emerald-400">
+                    {itHead.title}
+                  </div>
+                  <div className="text-[11px] text-slate-400">
+                    {itHead.degree}
+                  </div>
+                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
+                    {itHead.bio}
+                  </p>
+                </div>
+              </div>
+
+              <div className="pt-4 border-t border-slate-100 dark:border-slate-800 flex flex-wrap gap-2">
+                <span className="px-3 py-1 rounded-xl bg-slate-50 dark:bg-[#111e38] border border-slate-200 dark:border-slate-800 text-xs font-medium text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
+                  <span className="material-symbols-outlined text-xs text-emerald-500">terminal</span>
+                  <span>Digital Dispatch & Platforms</span>
+                </span>
+                <span className="px-3 py-1 rounded-xl bg-slate-50 dark:bg-[#111e38] border border-slate-200 dark:border-slate-800 text-xs font-medium text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
+                  <span className="material-symbols-outlined text-xs text-emerald-500">sync_alt</span>
+                  <span>Booking Automation</span>
+                </span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* FIELD SPRAY SPECIALISTS & ON-GROUND TECHNICIANS */}
+      <section className="w-full py-16 bg-white dark:bg-[#0B132B] border-t border-slate-200 dark:border-slate-800">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+          <div className="rounded-3xl bg-slate-50 dark:bg-[#15223e] border border-slate-200 dark:border-slate-700 p-8 sm:p-12 flex flex-col lg:flex-row items-center justify-between gap-8">
+            <div className="flex flex-col gap-3 max-w-xl">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 text-xs font-bold uppercase w-fit">
+                <span className="material-symbols-outlined text-sm">precision_manufacturing</span>
+                <span>Field Operations Crew</span>
+              </div>
+              <h3 className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white">
+                Certified Spray Technicians & Applicators
+              </h3>
+              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                Our on-ground workforce consists of trained, safety-certified spray operators equipped with commercial ULV misting machines, thermal foggers, personal protective equipment (PPE), and odorless chemical spray gear for precision treatment at your site.
+              </p>
+              <div className="flex flex-wrap gap-2 pt-2">
+                <span className="px-3 py-1 rounded-xl bg-white dark:bg-[#111e38] border border-slate-200 dark:border-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
+                  <span className="material-symbols-outlined text-xs text-emerald-500">check_circle</span>
+                  <span>ULV Cold Misting</span>
+                </span>
+                <span className="px-3 py-1 rounded-xl bg-white dark:bg-[#111e38] border border-slate-200 dark:border-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
+                  <span className="material-symbols-outlined text-xs text-emerald-500">check_circle</span>
+                  <span>Thermal Deep Fogging</span>
+                </span>
+                <span className="px-3 py-1 rounded-xl bg-white dark:bg-[#111e38] border border-slate-200 dark:border-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
+                  <span className="material-symbols-outlined text-xs text-emerald-500">check_circle</span>
+                  <span>Sub-Slab Termite Injections</span>
+                </span>
+                <span className="px-3 py-1 rounded-xl bg-white dark:bg-[#111e38] border border-slate-200 dark:border-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-300 flex items-center gap-1.5">
+                  <span className="material-symbols-outlined text-xs text-emerald-500">check_circle</span>
+                  <span>Odorless Gel Baits</span>
+                </span>
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row items-center gap-4 shrink-0">
+              <Link
+                href="/order"
+                className="px-8 py-4 rounded-2xl font-bold text-sm bg-emerald-600 hover:bg-emerald-500 text-white shadow-lg transition-all text-center"
+              >
+                Schedule Spray Service
+              </Link>
+              <a
+                href={`https://wa.me/${siteConfig.contact.whatsappClean}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-4 rounded-2xl font-bold text-sm bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 transition-all flex items-center gap-2 text-center"
+              >
+                <span className="material-symbols-outlined text-base text-emerald-500">chat</span>
+                <span>WhatsApp Dispatch</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 4-STEP SCIENTIFIC IPM PROTOCOL */}
       <section className="w-full py-16 bg-slate-50 dark:bg-[#070D1F] border-t border-slate-200 dark:border-slate-800">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="text-center max-w-2xl mx-auto mb-10 flex flex-col items-center gap-2">
@@ -278,33 +428,6 @@ export default function TeamPage() {
               <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
                 Long-term barrier sealing, exclusion measures, and periodic preventive monitoring.
               </p>
-            </div>
-          </div>
-
-          {/* Consultation CTA */}
-          <div className="mt-12 p-8 rounded-3xl bg-white dark:bg-[#15223e] border border-slate-200 dark:border-slate-700 text-center flex flex-col items-center gap-4">
-            <h3 className="text-2xl font-bold text-slate-900 dark:text-white">
-              Schedule a Professional Consultation
-            </h3>
-            <p className="text-slate-600 dark:text-slate-300 text-sm max-w-lg">
-              Residential • Commercial • Industrial • Agricultural
-            </p>
-            <div className="flex flex-wrap items-center justify-center gap-4">
-              <Link
-                href="/order"
-                className="px-8 py-3.5 rounded-xl font-bold text-sm bg-emerald-600 hover:bg-emerald-500 text-white shadow-md transition-all"
-              >
-                Book Inspection
-              </Link>
-              <a
-                href={`https://wa.me/${siteConfig.contact.whatsappClean}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-8 py-3.5 rounded-xl font-bold text-sm bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-slate-800 dark:text-slate-200 transition-all flex items-center gap-2"
-              >
-                <span className="material-symbols-outlined text-base text-emerald-500">chat</span>
-                <span>Chat on WhatsApp</span>
-              </a>
             </div>
           </div>
         </div>

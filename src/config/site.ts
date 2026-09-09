@@ -130,6 +130,21 @@ export const siteConfig = {
       "Protection of company legal & commercial interests"
     ]
   },
+  managementHead: {
+    name: "Fareeha Noureen",
+    degree: "Masters in Philosophy",
+    title: "Management Head",
+    company: "Peso Pest Control",
+    bio: "Oversees company operations, organizational management, administrative planning, and client service coordination to ensure seamless execution across all projects."
+  },
+  itHead: {
+    name: "M. Jazib",
+    degree: "IT & Systems Specialist",
+    title: "Head of IT & Digital Infrastructure",
+    company: "Peso Pest Control",
+    image: "/images/jazib.jpg",
+    bio: "Manages digital platforms, online dispatch systems, customer automation, and technology infrastructure to provide a seamless booking experience for Peso Pest Control."
+  },
   teamMembers: [
     {
       name: "Jawad Ahmad Ch",
@@ -139,7 +154,7 @@ export const siteConfig = {
       experience: "Executive Founder",
       specialization: "Operations, Strategy & Client Relations",
       bio: "Founder & Managing Director leading Peso Pest Control with a customer-centric focus on professional, safe, and modern pest management across residential and commercial sectors.",
-      specs: ["Founder & MD", "Leadership & Client Relations", "Quality & Safety Assurance"],
+      specs: ["Founder & MD", "Leadership & Strategy", "Quality & Safety Assurance"],
       image: "/images/jawad_ahmad.png"
     },
     {
@@ -165,15 +180,26 @@ export const siteConfig = {
       image: "/images/ahtsham_ul_haq.jpg"
     },
     {
-      name: "Bilal Ahmed",
-      title: "Senior Field Specialist",
-      qualification: "Certified PCO Specialist",
-      role: "Field Operations Lead",
-      experience: "9+ Years Experience",
-      specialization: "Structural Proofing & Deep Fumigation",
-      bio: "Master technician overseeing on-site chemical injection barriers, deep warehouse fumigation, and property proofing.",
-      specs: ["Master Field Tech", "Thermal Fogging Expert", "Barrier Injection Lead"],
-      image: "/images/general_pest.png"
+      name: "Fareeha Noureen",
+      title: "Management Head",
+      qualification: "Masters in Philosophy",
+      role: "Operations & Administration",
+      experience: "Management Lead",
+      specialization: "Organizational Planning & Customer Coordination",
+      bio: "Leads operational management, personnel coordination, and strategic client administration.",
+      specs: ["Masters in Philosophy", "Operations Management", "Customer Coordination"],
+      image: ""
+    },
+    {
+      name: "M. Jazib",
+      title: "Head of IT & Digital Infrastructure",
+      qualification: "IT & Systems Specialist",
+      role: "Digital Systems & Automation",
+      experience: "IT Expert",
+      specialization: "Platform Engineering, Automation & Dispatch Systems",
+      bio: "Spearheads digital systems, web platform architecture, online dispatch, and automated client communication.",
+      specs: ["IT & Systems Architecture", "Digital Dispatch", "Platform Automation"],
+      image: "/images/jazib.jpg"
     }
   ],
   faqs: [
