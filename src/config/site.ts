@@ -86,6 +86,32 @@ export const siteConfig = {
     commitment: "At Peso Pest Control, our goal is to understand each customer's pest problem and provide an appropriate treatment and prevention plan. We believe that professional pest control is not only about eliminating pests—it is about protecting people, property and the environment through responsible pest management.",
     bio: "Jawad Ahmad Ch is a dedicated professional and the Founder & Managing Director of Peso Pest Control, committed to providing reliable, professional and customer-focused pest management solutions. With a Master's degree in Political Science, Jawad brings strong skills in leadership, communication, management and client relations to the pest-control industry. His vision is to develop pest control as a professional service based on quality, safety, proper inspection and effective pest-management practices. Under his leadership, Peso Pest Control provides comprehensive pest management services for homes, offices, hotels, restaurants, warehouses, schools, commercial buildings and other facilities."
   },
+  technicalDirector: {
+    name: "Arslan Ch",
+    degree: "M.Sc. (Hons.) Entomology — PMAS-Arid Agriculture University",
+    title: "Technical Director & Entomology Specialist",
+    company: "Peso Pest Control",
+    image: "/images/arslan_ch.png",
+    motto: "Science Behind Pest Control",
+    framework: "Identify • Inspect • Control • Prevent",
+    vision: "To establish modern pest management as a professional, scientific and responsible service in Pakistan.",
+    approach: "At Peso Pest Control, every pest-control program begins with understanding the pest, identifying infestation sources and assessing the environment. Based on the inspection, appropriate pest-management methods are selected and applied according to professional safety and application principles. Our objective is to provide effective pest management with a strong focus on safety, prevention and long-term control.",
+    bio: "Arslan Ch is an Entomology professional and Technical Director at Peso Pest Control, specializing in scientific and integrated pest management solutions. With an M.Sc. (Hons.) in Entomology from PMAS-Arid Agriculture University, he has professional knowledge of insect identification, pest biology, behavior, ecology and modern pest-management practices. At Peso Pest Control, his focus is on developing and implementing effective, responsible and science-based pest control strategies for residential, commercial, agricultural and industrial environments.",
+    expertise: [
+      "Integrated Pest Management (IPM)",
+      "Cockroach & Ant Management",
+      "Mosquito & Fly Control",
+      "Termite Management",
+      "Bed Bug Control",
+      "Rodent Management",
+      "Agricultural Pest Management",
+      "ULV & Thermal Fogging",
+      "Pest Inspection & Monitoring",
+      "Insect Identification",
+      "Preventive Pest Management",
+      "Commercial & Industrial Pest Control"
+    ]
+  },
   teamMembers: [
     {
       name: "Jawad Ahmad Ch",
@@ -99,15 +125,15 @@ export const siteConfig = {
       image: "/images/jawad_ahmad.png"
     },
     {
-      name: "Dr. Farhan Tariq",
-      title: "Chief Entomologist & Technical Advisor",
-      qualification: "Ph.D. Urban Entomology",
-      role: "Technical Directorate",
-      experience: "15+ Years Experience",
-      specialization: "Pest Biology & Eco-Chemical Formulations",
-      bio: "Directs biological assessment, environmental safety standards, and precision pest colony eradication methods.",
-      specs: ["Ph.D. Entomology", "Eco-Chemical Lead", "Termite & Colony Specialist"],
-      image: "/images/termite.png"
+      name: "Arslan Ch",
+      title: "Technical Director & Entomology Specialist",
+      qualification: "M.Sc. (Hons.) Entomology — PMAS-Arid Agriculture University",
+      role: "Technical Directorate & IPM",
+      experience: "Entomology Specialist",
+      specialization: "Scientific Integrated Pest Management (IPM) & Biological Assessment",
+      bio: "Specializing in insect identification, pest biology, ecology, and science-based pest control strategies for residential, commercial, industrial, and agricultural sectors.",
+      specs: ["M.Sc. (Hons.) Entomology", "IPM Specialist", "ULV & Thermal Fogging Lead"],
+      image: "/images/arslan_ch.png"
     },
     {
       name: "Bilal Ahmed",
@@ -115,7 +141,7 @@ export const siteConfig = {
       qualification: "Certified PCO Specialist",
       role: "Field Operations Lead",
       experience: "9+ Years Experience",
-      specialization: "Structural Proofing & ULV / Thermal Fogging",
+      specialization: "Structural Proofing & Deep Fumigation",
       bio: "Master technician overseeing on-site chemical injection barriers, deep warehouse fumigation, and property proofing.",
       specs: ["Master Field Tech", "Thermal Fogging Expert", "Barrier Injection Lead"],
       image: "/images/general_pest.png"
