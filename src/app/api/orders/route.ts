@@ -81,7 +81,7 @@ export async function POST(request: Request) {
         }));
 
         return NextResponse.json(
-            { error: 'Failed to place order.' },
+            { error: error instanceof Error ? error.message : 'Failed to place order.' },
             { status: 500 }
         );
     }

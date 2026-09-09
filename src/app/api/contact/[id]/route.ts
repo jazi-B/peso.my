@@ -1,11 +1,10 @@
-
 import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/prisma';
 import { isAuthenticated } from '@/lib/auth';
 
 export async function DELETE(
     request: Request,
-    { params }: { params: Promise<{ id: string }> }
+    context: { params: Promise<{ id: string }> | { id: string } }
 ) {
     const auth = await isAuthenticated();
     if (!auth) {
@@ -13,7 +12,8 @@ export async function DELETE(
     }
 
     try {
-        const { id } = await params;
+        const resolvedParams = await context.params;
+        const id = resolvedParams.id;
         await prisma.contactQuery.delete({
             where: { id: parseInt(id) },
         });
