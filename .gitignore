@@ -30,8 +30,13 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
-# .env*
+# env files
+.env*
+.env
+.env.local
+find_pooler.js
+setup_db.js
+test_order.js
 
 # vercel
 .vercel
