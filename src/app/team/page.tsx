@@ -255,8 +255,8 @@ export default function TeamPage() {
             {/* Fareeha Noureen (Management Head) */}
             <div className="rounded-3xl bg-white dark:bg-[#15223e] border border-slate-200 dark:border-slate-700 p-8 shadow-sm flex flex-col justify-between gap-6 hover:border-emerald-500/40 transition-all">
               <div className="flex flex-col sm:flex-row gap-6 items-start">
-                <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl bg-gradient-to-br from-emerald-100 to-teal-100 dark:from-emerald-950 dark:to-[#111e38] border border-emerald-200 dark:border-emerald-800 shrink-0 flex items-center justify-center text-emerald-600 dark:text-emerald-400 shadow-inner">
-                  <span className="material-symbols-outlined text-5xl">manage_accounts</span>
+                <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden bg-slate-200 dark:bg-slate-800 shrink-0 border border-slate-300 dark:border-slate-700 shadow-md flex items-center justify-center">
+                  <img src={managementHead.image} alt={managementHead.name} className="w-full h-full object-cover" />
                 </div>
 
                 <div className="flex flex-col gap-1 flex-1">

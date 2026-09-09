@@ -135,6 +135,7 @@ export const siteConfig = {
     degree: "Masters in Philosophy",
     title: "Management Head",
     company: "Peso Pest Control",
+    image: "/images/fareeha_noureen.png",
     bio: "Oversees company operations, organizational management, administrative planning, and client service coordination to ensure seamless execution across all projects."
   },
   itHead: {
@@ -188,7 +189,7 @@ export const siteConfig = {
       specialization: "Organizational Planning & Customer Coordination",
       bio: "Leads operational management, personnel coordination, and strategic client administration.",
       specs: ["Masters in Philosophy", "Operations Management", "Customer Coordination"],
-      image: ""
+      image: "/images/fareeha_noureen.png"
     },
     {
       name: "M. Jazib",
