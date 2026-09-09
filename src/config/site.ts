@@ -112,6 +112,24 @@ export const siteConfig = {
       "Commercial & Industrial Pest Control"
     ]
   },
+  legalAdvisor: {
+    name: "Ahtsham-ul-Haq",
+    deskName: "Rao Ihtishamul Haq",
+    degree: "LLB | Advocate High Court",
+    title: "Legal Advisor",
+    company: "Peso Pest Control",
+    image: "/images/ahtsham_ul_haq.jpg",
+    motto: "Providing sound legal guidance for responsible, compliant and sustainable business growth.",
+    bio: "Ahtsham-ul-Haq is an Advocate of the High Court serving as Legal Advisor at Peso Pest Control. He provides legal guidance regarding business agreements, service contracts, regulatory compliance, customer and vendor agreements, documentation, and corporate legal governance.",
+    responsibilities: [
+      "Legal advice for business operations & regulatory compliance",
+      "Review and preparation of commercial service agreements",
+      "Contract and corporate documentation support",
+      "Customer & vendor agreement review",
+      "Dispute and legal matter assistance",
+      "Protection of company legal & commercial interests"
+    ]
+  },
   teamMembers: [
     {
       name: "Jawad Ahmad Ch",
@@ -136,6 +154,17 @@ export const siteConfig = {
       image: "/images/arslan_ch.png"
     },
     {
+      name: "Ahtsham-ul-Haq",
+      title: "Legal Advisor & Advocate High Court",
+      qualification: "LLB | Advocate High Court",
+      role: "Legal Governance & Compliance",
+      experience: "Advocate High Court",
+      specialization: "Corporate Compliance & Commercial Service Contracts",
+      bio: "Advocate of the High Court ensuring legal integrity, contract governance, regulatory compliance, and client agreement standards.",
+      specs: ["Advocate High Court", "Corporate Compliance", "Contract Governance"],
+      image: "/images/ahtsham_ul_haq.jpg"
+    },
+    {
       name: "Bilal Ahmed",
       title: "Senior Field Specialist",
       qualification: "Certified PCO Specialist",
@@ -145,17 +174,6 @@ export const siteConfig = {
       bio: "Master technician overseeing on-site chemical injection barriers, deep warehouse fumigation, and property proofing.",
       specs: ["Master Field Tech", "Thermal Fogging Expert", "Barrier Injection Lead"],
       image: "/images/general_pest.png"
-    },
-    {
-      name: "Usman Raza",
-      title: "Operations & Rapid Dispatch Lead",
-      qualification: "Operations Management",
-      role: "Customer Success & Dispatch",
-      experience: "7+ Years Experience",
-      specialization: "Rapid Response & Field Logistics",
-      bio: "Coordinates rapid response deployments, customer care follow-ups, and post-service warranty inspections.",
-      specs: ["Rapid Response Lead", "Logistics & Dispatch", "Post-Service Follow-up"],
-      image: "/images/disinfectant.png"
     }
   ],
   faqs: [

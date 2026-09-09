@@ -3,11 +3,11 @@ import Link from 'next/link';
 
 export const metadata = {
   title: `Our Leadership & Team - ${siteConfig.name}`,
-  description: 'Meet our leadership team: Jawad Ahmad Ch (Founder & MD) and Arslan Ch (Technical Director & Entomology Specialist), alongside our licensed field specialists.',
+  description: 'Meet our leadership team: Jawad Ahmad Ch (Founder & MD), Arslan Ch (Technical Director), and Ahtsham-ul-Haq (Legal Advisor).',
 };
 
 export default function TeamPage() {
-  const { founder, technicalDirector } = siteConfig;
+  const { founder, technicalDirector, legalAdvisor } = siteConfig;
 
   return (
     <div className="flex flex-col w-full">
@@ -15,24 +15,23 @@ export default function TeamPage() {
       <section className="w-full bg-[#0B132B] text-white py-16 px-4 sm:px-6 text-center">
         <div className="max-w-3xl mx-auto flex flex-col items-center gap-3">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-bold uppercase tracking-wider">
-            Executive & Technical Leadership
+            Leadership & Governance
           </div>
           <h1 className="text-3xl sm:text-5xl font-black tracking-tight">
             Meet Our Leadership & Team
           </h1>
           <p className="text-slate-300 text-sm sm:text-base max-w-2xl">
-            Committed to scientific pest management, safety, and long-term protection across Pakistan.
+            A synergy of executive leadership, scientific entomology, and legal compliance dedicated to professional pest management across Pakistan.
           </p>
         </div>
       </section>
 
-      {/* CORE LEADERSHIP PILLARS (TWO SPOTLIGHT CARDS) */}
+      {/* CORE LEADERSHIP PILLARS (THREE EXECUTIVE SPOTLIGHT CARDS) */}
       <section className="w-full py-16 bg-white dark:bg-[#0B132B]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col gap-16">
           
           {/* 1. FOUNDER & MANAGING DIRECTOR */}
           <div className="rounded-3xl bg-slate-50 dark:bg-[#15223e] border border-slate-200 dark:border-slate-700 p-8 sm:p-12 shadow-md flex flex-col lg:flex-row gap-10 items-center lg:items-start">
-            {/* Image Card */}
             <div className="flex flex-col items-center gap-4 shrink-0 w-full lg:w-80">
               <div className="relative w-64 h-80 sm:w-72 sm:h-96 rounded-3xl overflow-hidden shadow-xl border-4 border-white dark:border-slate-800 bg-slate-200 dark:bg-slate-800">
                 <img
@@ -53,11 +52,10 @@ export default function TeamPage() {
               </div>
             </div>
 
-            {/* Bio & Details */}
             <div className="flex flex-col gap-5 flex-1 text-slate-800 dark:text-slate-200">
               <div>
                 <span className="text-xs font-bold text-amber-600 dark:text-amber-400 uppercase tracking-widest">
-                  Founder Profile
+                  Executive Profile
                 </span>
                 <h2 className="text-3xl font-black text-slate-900 dark:text-white mt-1">
                   {founder.name}
@@ -74,7 +72,6 @@ export default function TeamPage() {
                 <p>{founder.bio}</p>
               </div>
 
-              {/* Mission & Vision */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
                 <div className="p-4 rounded-2xl bg-white dark:bg-[#111e38] border border-slate-200 dark:border-slate-700/80 flex flex-col gap-1.5">
                   <div className="flex items-center gap-1.5 text-emerald-600 dark:text-emerald-400 font-bold text-xs uppercase">
@@ -92,7 +89,6 @@ export default function TeamPage() {
                 </div>
               </div>
 
-              {/* Commitment */}
               <div className="p-4 rounded-2xl bg-slate-100 dark:bg-[#101b33] border border-slate-200 dark:border-slate-800">
                 <span className="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wider block mb-1">
                   Our Commitment
@@ -106,7 +102,6 @@ export default function TeamPage() {
 
           {/* 2. TECHNICAL DIRECTOR & ENTOMOLOGY SPECIALIST */}
           <div className="rounded-3xl bg-slate-50 dark:bg-[#15223e] border border-slate-200 dark:border-slate-700 p-8 sm:p-12 shadow-md flex flex-col lg:flex-row-reverse gap-10 items-center lg:items-start">
-            {/* Image Card */}
             <div className="flex flex-col items-center gap-4 shrink-0 w-full lg:w-80">
               <div className="relative w-64 h-80 sm:w-72 sm:h-96 rounded-3xl overflow-hidden shadow-xl border-4 border-white dark:border-slate-800 bg-slate-200 dark:bg-slate-800">
                 <img
@@ -130,7 +125,6 @@ export default function TeamPage() {
               </div>
             </div>
 
-            {/* Bio & Details */}
             <div className="flex flex-col gap-5 flex-1 text-slate-800 dark:text-slate-200">
               <div>
                 <span className="text-xs font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-widest">
@@ -151,7 +145,6 @@ export default function TeamPage() {
                 <p>{technicalDirector.bio}</p>
               </div>
 
-              {/* Approach & Scientific Framework */}
               <div className="p-4 rounded-2xl bg-white dark:bg-[#111e38] border border-slate-200 dark:border-slate-700/80">
                 <div className="flex items-center gap-1.5 text-emerald-600 dark:text-emerald-400 font-bold text-xs uppercase mb-1">
                   <span className="material-symbols-outlined text-sm">science</span>
@@ -162,7 +155,6 @@ export default function TeamPage() {
                 </p>
               </div>
 
-              {/* Technical Expertise Tags */}
               <div className="pt-2">
                 <span className="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wider block mb-2">
                   Technical Expertise:
@@ -176,6 +168,67 @@ export default function TeamPage() {
                       <span className="material-symbols-outlined text-xs text-emerald-500">check_circle</span>
                       <span>{item}</span>
                     </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* 3. LEGAL ADVISOR */}
+          <div className="rounded-3xl bg-slate-50 dark:bg-[#15223e] border border-slate-200 dark:border-slate-700 p-8 sm:p-12 shadow-md flex flex-col lg:flex-row gap-10 items-center lg:items-start">
+            <div className="flex flex-col items-center gap-4 shrink-0 w-full lg:w-80">
+              <div className="relative w-64 h-80 sm:w-72 sm:h-96 rounded-3xl overflow-hidden shadow-xl border-4 border-white dark:border-slate-800 bg-slate-200 dark:bg-slate-800">
+                <img
+                  src={legalAdvisor.image}
+                  alt={legalAdvisor.name}
+                  className="w-full h-full object-cover object-top"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent flex flex-col justify-end p-6 text-white">
+                  <span className="text-xs font-bold text-emerald-400 tracking-wider uppercase">Legal Advisor</span>
+                  <h3 className="text-xl font-bold">{legalAdvisor.name}</h3>
+                  <span className="text-xs text-slate-300">{legalAdvisor.degree}</span>
+                </div>
+              </div>
+              <div className="p-3.5 rounded-2xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 text-center w-full max-w-xs">
+                <span className="text-xs font-bold text-emerald-700 dark:text-emerald-300 italic">
+                  “{legalAdvisor.motto}”
+                </span>
+              </div>
+            </div>
+
+            <div className="flex flex-col gap-5 flex-1 text-slate-800 dark:text-slate-200">
+              <div>
+                <span className="text-xs font-bold text-blue-600 dark:text-blue-400 uppercase tracking-widest">
+                  Legal Directorate & Governance
+                </span>
+                <h2 className="text-3xl font-black text-slate-900 dark:text-white mt-1">
+                  {legalAdvisor.name}
+                </h2>
+                <div className="text-sm font-bold text-emerald-600 dark:text-emerald-400 mt-1">
+                  {legalAdvisor.title} — {legalAdvisor.company}
+                </div>
+                <div className="text-xs text-slate-500 dark:text-slate-400 font-medium">
+                  {legalAdvisor.degree}
+                </div>
+              </div>
+
+              <div className="text-sm sm:text-base leading-relaxed text-slate-600 dark:text-slate-300">
+                <p>{legalAdvisor.bio}</p>
+              </div>
+
+              <div className="pt-2">
+                <span className="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-wider block mb-2">
+                  Key Legal Responsibilities:
+                </span>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                  {legalAdvisor.responsibilities.map((resp: string, idx: number) => (
+                    <div
+                      key={idx}
+                      className="p-3 rounded-xl bg-white dark:bg-[#111e38] border border-slate-200 dark:border-slate-800 text-xs font-medium text-slate-700 dark:text-slate-300 flex items-start gap-2"
+                    >
+                      <span className="material-symbols-outlined text-xs text-blue-500 shrink-0 mt-0.5">gavel</span>
+                      <span>{resp}</span>
+                    </div>
                   ))}
                 </div>
               </div>
@@ -231,7 +284,7 @@ export default function TeamPage() {
           {/* Consultation CTA */}
           <div className="mt-12 p-8 rounded-3xl bg-white dark:bg-[#15223e] border border-slate-200 dark:border-slate-700 text-center flex flex-col items-center gap-4">
             <h3 className="text-2xl font-bold text-slate-900 dark:text-white">
-              Schedule a Scientific Inspection
+              Schedule a Professional Consultation
             </h3>
             <p className="text-slate-600 dark:text-slate-300 text-sm max-w-lg">
               Residential • Commercial • Industrial • Agricultural
