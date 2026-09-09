@@ -74,45 +74,61 @@ export const siteConfig = {
       icon: "bolt"
     }
   ],
+  founder: {
+    name: "Jawad Ahmad Ch",
+    degree: "Master in Political Science",
+    title: "Founder & Managing Director",
+    company: "Peso Pest Control",
+    image: "/images/jawad_ahmad.png",
+    motto: "Your Safety. Our Responsibility. Pest-Free Environment.",
+    mission: "Professional Service • Quality Treatment • Customer Satisfaction",
+    vision: "To make Peso Pest Control a trusted name in professional pest management by delivering dependable services and building long-term relationships with our customers.",
+    commitment: "At Peso Pest Control, our goal is to understand each customer's pest problem and provide an appropriate treatment and prevention plan. We believe that professional pest control is not only about eliminating pests—it is about protecting people, property and the environment through responsible pest management.",
+    bio: "Jawad Ahmad Ch is a dedicated professional and the Founder & Managing Director of Peso Pest Control, committed to providing reliable, professional and customer-focused pest management solutions. With a Master's degree in Political Science, Jawad brings strong skills in leadership, communication, management and client relations to the pest-control industry. His vision is to develop pest control as a professional service based on quality, safety, proper inspection and effective pest-management practices. Under his leadership, Peso Pest Control provides comprehensive pest management services for homes, offices, hotels, restaurants, warehouses, schools, commercial buildings and other facilities."
+  },
   teamMembers: [
     {
-      name: "M. Jazib",
-      title: "Managing Director",
-      role: "Executive Leadership",
-      experience: "12+ Years Experience",
-      specialization: "Structural Defense & Operations Management",
-      bio: "Oversees enterprise operations, quality standards, and large-scale pest management logistics across residential and commercial sectors.",
-      specs: ["Certified PCO", "Operations Director", "Quality Assurance Lead"],
-      image: "/images/fumigation.png"
+      name: "Jawad Ahmad Ch",
+      title: "Founder & Managing Director",
+      qualification: "Master in Political Science",
+      role: "Executive Leadership & Strategy",
+      experience: "Executive Founder",
+      specialization: "Operations, Strategy & Client Relations",
+      bio: "Founder & Managing Director leading Peso Pest Control with a customer-centric focus on professional, safe, and modern pest management across residential and commercial sectors.",
+      specs: ["Founder & MD", "Leadership & Client Relations", "Quality & Safety Assurance"],
+      image: "/images/jawad_ahmad.png"
     },
     {
       name: "Dr. Farhan Tariq",
-      title: "Chief Entomologist",
+      title: "Chief Entomologist & Technical Advisor",
+      qualification: "Ph.D. Urban Entomology",
       role: "Technical Directorate",
       experience: "15+ Years Experience",
-      specialization: "Pest Biology & Eco-Chemical Safety",
-      bio: "Specializes in non-toxic chemical formulations, safe application standards, and targeted colony interception techniques.",
-      specs: ["Ph.D. Urban Entomology", "Chemical Safety Lead", "Termite Specialist"],
+      specialization: "Pest Biology & Eco-Chemical Formulations",
+      bio: "Directs biological assessment, environmental safety standards, and precision pest colony eradication methods.",
+      specs: ["Ph.D. Entomology", "Eco-Chemical Lead", "Termite & Colony Specialist"],
       image: "/images/termite.png"
     },
     {
       name: "Bilal Ahmed",
       title: "Senior Field Specialist",
-      role: "Field Operations",
+      qualification: "Certified PCO Specialist",
+      role: "Field Operations Lead",
       experience: "9+ Years Experience",
-      specialization: "Termite Proofing & Deep Fumigation",
-      bio: "Experienced lead technician specializing in precise structural barrier injections, ULV misting, and complete property treatment.",
+      specialization: "Structural Proofing & ULV / Thermal Fogging",
+      bio: "Master technician overseeing on-site chemical injection barriers, deep warehouse fumigation, and property proofing.",
       specs: ["Master Field Tech", "Thermal Fogging Expert", "Barrier Injection Lead"],
       image: "/images/general_pest.png"
     },
     {
       name: "Usman Raza",
-      title: "Operations & Dispatch Lead",
-      role: "Client Support",
+      title: "Operations & Rapid Dispatch Lead",
+      qualification: "Operations Management",
+      role: "Customer Success & Dispatch",
       experience: "7+ Years Experience",
-      specialization: "Rapid Response & Customer Care",
-      bio: "Manages rapid dispatch scheduling, customer support consultations, and post-service follow-up inspections.",
-      specs: ["Customer Support Lead", "Rapid Dispatch", "Inspection Coordinator"],
+      specialization: "Rapid Response & Field Logistics",
+      bio: "Coordinates rapid response deployments, customer care follow-ups, and post-service warranty inspections.",
+      specs: ["Rapid Response Lead", "Logistics & Dispatch", "Post-Service Follow-up"],
       image: "/images/disinfectant.png"
     }
   ],
