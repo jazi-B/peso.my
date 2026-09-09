@@ -4,7 +4,7 @@ import { isAuthenticated } from '@/lib/auth';
 
 export async function PATCH(
     request: Request,
-    context: { params: Promise<{ id: string }> | { id: string } }
+    context: { params: Promise<{ id: string }> }
 ) {
     const auth = await isAuthenticated();
     if (!auth) {
@@ -12,8 +12,7 @@ export async function PATCH(
     }
 
     try {
-        const resolvedParams = await context.params;
-        const id = resolvedParams.id;
+        const { id } = await context.params;
         const body = await request.json();
         const { status } = body;
 
@@ -22,7 +21,7 @@ export async function PATCH(
         }
 
         const order = await prisma.order.update({
-            where: { id: parseInt(id) },
+            where: { id: parseInt(id, 10) },
             data: { status },
         });
 
@@ -37,7 +36,7 @@ export async function PATCH(
 
 export async function DELETE(
     request: Request,
-    context: { params: Promise<{ id: string }> | { id: string } }
+    context: { params: Promise<{ id: string }> }
 ) {
     const auth = await isAuthenticated();
     if (!auth) {
@@ -45,10 +44,9 @@ export async function DELETE(
     }
 
     try {
-        const resolvedParams = await context.params;
-        const id = resolvedParams.id;
+        const { id } = await context.params;
         await prisma.order.delete({
-            where: { id: parseInt(id) },
+            where: { id: parseInt(id, 10) },
         });
 
         return NextResponse.json({ success: true });

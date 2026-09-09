@@ -1,45 +1,62 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
-import { WhatsAppButton } from "@/components/WhatsAppButton";
-import { siteConfig } from "@/config/site";
-
-
-
-const inter = Inter({ subsets: ["latin"] });
+import './globals.css';
+import { Navbar } from '@/components/Navbar';
+import { Footer } from '@/components/Footer';
+import { WhatsAppButton } from '@/components/WhatsAppButton';
+import { siteConfig } from '@/config/site';
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: {
-    default: siteConfig.name,
+    default: `${siteConfig.name} - ${siteConfig.tagline}`,
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
-  keywords: ["Pest Control", "Fumigation", "Termite Control", "Disinfectant", "Rodent Control", "Pest Removal"],
-  authors: [{ name: "Peso.io" }],
+  keywords: [
+    'Pest Control Lahore',
+    'Fumigation Services Karachi',
+    'Termite Proofing Pakistan',
+    'Cockroach Eradication',
+    'Bedbug Heat Treatment',
+    'Rodent Control',
+    'Disinfection Service',
+    'Peso Pest Solutions'
+  ],
+  authors: [{ name: 'Peso Pest Solutions' }],
+  icons: {
+    icon: '/favicon.ico',
+  },
   openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: "https://peso.my",
-    title: siteConfig.name,
+    title: `${siteConfig.name} - ${siteConfig.tagline}`,
     description: siteConfig.description,
+    url: 'https://peso.my',
     siteName: siteConfig.name,
+    locale: 'en_US',
+    type: 'website',
   },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
-      <body className={inter.className} style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+    <html lang="en" className="scroll-smooth">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+          rel="stylesheet"
+        />
+      </head>
+      <body className="antialiased bg-[#f8faff] dark:bg-[#0B132B] text-slate-900 dark:text-slate-100 min-h-screen flex flex-col pt-[116px]">
         <Navbar />
-        <main style={{ flex: 1 }}>
-          {children}
-        </main>
+        <main className="flex-1 w-full">{children}</main>
         <Footer />
         <WhatsAppButton />
       </body>

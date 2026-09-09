@@ -19,8 +19,7 @@ export async function POST(request: Request) {
         }
 
         // Validate service
-        // @ts-ignore
-        if (!SERVICES.includes(service)) {
+        if (!service || typeof service !== 'string' || service.trim().length === 0) {
             return NextResponse.json(
                 { error: 'Invalid service selected.' },
                 { status: 400 }
